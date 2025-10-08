@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Duran_Culminating</title>
+  <link rel="stylesheet" href="duran_portfolio.css">
+  </head>
+  <body>
+   <nav>
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#about-me" class="nav-link">About Me</a>
+        <a href="#credentials" class="nav-link">Credentials</a>
+        <a href="#contact" class="nav-link">Contact</a>
+        <hr>
+    </nav>
+    <section id="home" class="active">
+       <center>
+            <h1>MEGAN JEZETTE DURAN </h1>
+            <p><strong>12 - PINTAFLORES</strong></p>
+            <img src="MEGAN.jpg" width="180" height="180" alt="Megan Jezette Duran" title="Megan Jezette Duran">
+            <hr>
+        </center>
+    </section>
+     <section id="about-me">
+        <center> 
+            <h2>About Me</h2>
+            <p>Hi I'm Megan Jezette S. Duran, you can call me DURAN. I'am a student from ICT Grade 12 Pintaflores. I'am an old student here at Escuela de Sophia of Caloocan Inc. <br> If you are asking about my achievements, I would say that I'm not a person who are always participating in every event inside the school, why? Because I'm an introvert person, <br> I can't face in front of many people and watching me in what I'am doing. I'm a shy type person. I don't mind about my greades, I just do what i can and just go with the flow.<br> People asking me what is my talent, because they see me a girl that is quite and not always talking, i'd always say my ONLY talent is DANCING, and I'm always looking for new ways to grow and connect with others
+            <hr>
+        </center>
+     </section>
+     <section id="credentials">
+      <h2>Credentials</h2>
+        <li>Grade 11 1st Quarter Bronze Seal Bearer  </li>
+                <li>Grade 11 3rd Quarter Bronze Seal Bearer </li>
+                <li>Grade 11 4th Quarter Bronze Seal Bearer</li>
+                <li>Loyalty Awardee ( Kinder to Grade 12)</li>
+                <li>Grade 10 Consistent Model Student Award</li>
+            </ul>
+        
+        <header>
+            <img src="1ST.jpeg" alt= "1ST" width="200" height="200">
+            <img src="4TH.jpeg" alt="4TH" width="200" height="200">
+            <img src="LOYALTY.jpeg" alt="LOYALTY" width="200" height="200">
+            <img src="GRADE 10.jpeg" alt="Grade 10" width="200" height="200">
+          </header>
+     </section>
+       <section id="contact">
+        <center>     
+        <label>
+            Name:
+            <input type="text" name="Name" placeholder="Surname, First Name">
+        </label>
+        <br><br>
+
+        <label>
+            Email:
+            <input type="email" name="Email" placeholder="example@email.com">
+        </label>
+        <br><br>
+
+        <label>
+            Contact:
+            <input type="tel" name="Contact" placeholder="(09xx) xxx-xxxx">
+        </label>
+        <br><br>
+
+        <label>
+            Message:
+            <textarea name="Message" rows="4" placeholder="Write your message here..."></textarea>
+        </label>
+        <br><br>
+
+        <label>Reason for Contact:</label><br>
+        <label><input type="checkbox" name="Reason[]" value="Inquiry"> Inquiry</label><br>
+        <label><input type="checkbox" name="Reason[]" value="For Appointment"> For Appointment</label><br>
+        <label><input type="checkbox" name="Reason[]" value="Customer Support"> Customer Support</label><br>
+        <label><input type="checkbox" name="Reason[]" value="Feedback"> Feedback</label>
+        <br><br>
+
+        <label>Which service are you interested in?</label><br>
+        <label><input type="radio" name="Service" value="PPT Making"> Photography</label><br>
+        <label><input type="radio" name="Service" value="Video Editing"> Video Editing</label><br>
+        <label><input type="radio" name="Service" value="Practice"> Dancing</label>
+        <br><br>
+
+        <h2>CONTACT DETAILS </h2>
+            <p>
+                Email: meganjezette.duran@edsci.edu.ph</p>
+            <p>
+                <a href="https://www.facebook.com/share/1Cd8ygBH52/?mibextid=wwXIfr"> Facebook</a>
+            </p> 
+            <p>
+                <a href="https://www.instagram.com/hirahhhhhmwaaaaa?igsh=MXZ2NTNjZG51ZjNpcg%3D%3D&utm_source=qr"> Instagram</a>
+            </p>
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+    </form>
+        </center>
+
+        <script>
+        const navLinks = document.querySelectorAll('.nav-link');
+        const sections = document.querySelectorAll('section');
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault(); // Stop page jump
+
+                // Remove 'active' class from all links
+                navLinks.forEach(link => link.classList.remove('active'));
+
+                // Add 'active' to clicked link
+                link.classList.add('active');
+
+                // Hide all sections
+                sections.forEach(section => section.classList.remove('active'));
+
+                // Show the clicked section
+                const target = document.querySelector(link.getAttribute('href'));
+                target.classList.add('active');
+            });
+        });
+    </script>
+
+</head>
+</body>
+</html>
